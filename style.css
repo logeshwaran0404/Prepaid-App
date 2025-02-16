@@ -1,0 +1,151 @@
+*{
+    font-family: 'roboto';
+}
+
+.navbar{
+    width: 100%;
+    background-color: #d97706;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* Sidebar Styling */
+.sidebar {
+    width: 25%;
+    height: 100vh; /* Full Height */
+    position: fixed; /* Keep it static */
+    top: 0;
+    left: 0;
+    background-color: #343a40; /* Dark background */
+    color: white;
+    padding: 20px;
+}
+
+.sidebar .list-group {
+    width: 100%;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 25%;
+    padding: 20px;
+    width: 75%;
+}
+
+/* Horizontal Scroll Container */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.card {
+    min-width: 250px;
+    margin: 10px;
+    flex: 0 0 auto;
+}
+
+/* Hide Scrollbar */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.scroll-left {
+    left: 30%;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #d3d3d3;
+    padding: 15px 20px;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #d97706;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Scrollable Navbar Container */
+.scrolling-navbar {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #d3d3d3;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #aaa;
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar List */
+.scrolling-navbar .nav {
+    flex-wrap: nowrap;
+}
+
+/* Navbar Links */
+.nav-tabs .nav-link {
+    display: inline-block;
+    color: #555;
+    font-weight: normal;
+    padding: 10px 15px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Active Tab */
+.nav-tabs .nav-link.active {
+    font-weight: bold;
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrolling-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    color: red;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.paymemt-body{
+    margin-left: 25%;
+    padding: 20px;
+    width: 75%;
+}

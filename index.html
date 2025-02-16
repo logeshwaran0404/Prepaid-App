@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Mobicomm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div>
+            <nav class="navbar navbar-light fixed-top w-100">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#home">
+                        <img src="Assets/Images/logo.png" alt="logo" width="38" height="34" class="d-inline-block align-text-center">
+                        <h1 class="h1 as h3 d-inline-block align-text-center text-light fw-bold">MOBICOMM</h1>
+                    </a>
+                    <div class="me-3">
+                        <div class="dropdown">
+                            <a class="navbar-brand" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="Assets/Images/profile-icon.png" class="float-end me-3" alt="Profile" width="35" height="35">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">Login</a></li>
+                                <li><a class="dropdown-item" href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 bg-dark text-light vh-100 position-fixed d-flex flex-column align-items-center pt-4">
+                <div class="list-group w-100 mt-5">
+                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-1">Offers</a>
+                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-2">Gift card</a>
+                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-3">Wallet money</a>
+                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-4">Help & Support</a>
+                </div>
+            </nav>
+
+            <!-- Recharge card -->
+            <section class="col-md-9 ms-auto mt-5 p-4">
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h1 class="h1 as h3">Prepaid Recharge</h3>
+                        <p class="mb-0 mt-3">Mobile Number</h5>
+                        <input type="tel" class="form-control mt-0 w-75" placeholder="Enter 10-digit mobile number" required pattern="^\d{10}$">
+                        <button type="button" onclick="window.location.href='plans.html'" class="btn btn-primary mt-3 ms-5 w-50 p-0">Proceed to recharge</button>
+                    </div> 
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h3 class="mb-2">Super Saver plans</h3>
+        <div class="position-relative">
+            <div class="scroll-container d-flex">
+                <!-- Card 1 -->
+                <div class="card shadow">
+                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">Description for card 1.</p>
+                        <button type="button" onclick="window.location.href='Details.html'" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card shadow">
+                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">Description for card 2.</p>
+                        <button type="button" onclick="window.location.href='Details.html'" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
+
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card shadow">
+                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 3</h5>
+                        <p class="card-text">Description for card 3.</p>
+                        <button type="button" onclick="window.location.href='Details.html'" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card shadow">
+                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 4</h5>
+                        <p class="card-text">Description for card 4.</p>
+                        <button type="button" onclick="window.location.href='Details.html'" type="submit" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="position-relative">
+            <h2 class="h2 as h4">Online Prepaid Recharge</h2>
+            <div class="card d-flex p-3 shadow">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut excepturi eveniet cupiditate! At ipsam eum harum omnis 
+                    deleniti aperiam laborum! Magnam minus repudiandae, veniam aperiam vel ea beatae dolore quisquam.</p>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="position-relative">
+            <h2 class="h2 as h4">FAQ's</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="position-relative">
+
+            <footer class="footer mt-2">
+                <div class="container">
+                    <div class="row text-dark">
+                        <div class="col-md-3">
+                            <h2 class="text-dark     fw-bold">Mobicomm</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <p>About us</p>
+                            <p>Contact us</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Privacy Policy</p>
+                            <p>Terms & Conditions</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Testimonials</p>
+                            <p>Consumer Complaint</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        
+            <div class="footer-bottom m-0">
+                @copy rights reserved to mobicomm
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function scrollLeft() { 
+            document.querySelector(".scroll-container").scrollBy({
+                left: -300, behavior: "smooth"
+            });
+        }
+
+        function scrollRight() {
+            document.querySelector(".scroll-container").scrollBy({
+                left: 300, behavior: "smooth"
+            });
+        }
+
+    </script>
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
