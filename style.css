@@ -4,7 +4,7 @@
 
 .navbar{
     width: 100%;
-    background-color: #d97706;
+    background-color: #1d3463;
     color: white;
     text-align: center;
     padding: 10px;
@@ -26,6 +26,69 @@
 }
 
 /* Main Content Area */
+.index-main-content {
+    margin-left: 25%;
+    padding: 20px;
+    width: 100%;
+}
+
+.recharge-section {
+    background-color: #ffffff; /* White background for the section */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px; /* Padding for spacing */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+
+}
+
+
+h1.h3 {
+    color: #007bff; /* Primary color for the heading */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.input-group {
+    display: flex; /* Flexbox for input and button alignment */
+    justify-content: center; /* Center the input and button */
+    padding-left: 30px;
+}
+
+input[type="tel"] {
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 5px 0 0 5px; /* Rounded corners for input */
+    padding: 10px; /* Padding for input */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="tel"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* Remove border */
+    border-radius: 0 5px 5px 0; /* Rounded corners for button */
+    padding: 10px 20px; /* Padding for button */
+}
+
+.btn-primary:disabled {
+    background-color: #6c757d; /* Gray color for disabled button */
+}
+
+@media (max-width: 768px) {
+    .recharge-section {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    input[type="tel"] {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .btn-primary {
+        width: 100%; /* Full width button on smaller screens */
+        border-radius: 5px; /* Full rounded corners for button */
+    }
+}
 .main-content {
     margin-left: 25%;
     padding: 20px;
@@ -62,7 +125,9 @@
 .scroll-right {
     right: 10px;
 }
-
+.btn{
+    background-color: darkslategrey;
+}
 .footer {
     width: 100%;
     background-color: #d3d3d3;
@@ -71,7 +136,7 @@
 
 .footer-bottom {
     width: 100%;
-    background-color: #d97706;
+    background-color: #067ed9;
     color: white;
     text-align: center;
     padding: 10px;

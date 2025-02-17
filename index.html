@@ -13,9 +13,9 @@
 <body>
     <header>
         <div>
-            <nav class="navbar navbar-light fixed-top w-100">
+            <nav class="navbar navbar-light fixed-top w-100 mb-5">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#home">
+                    <a class="navbar-brand" href="index.html">
                         <img src="Assets/Images/logo.png" alt="logo" width="38" height="34" class="d-inline-block align-text-center">
                         <h1 class="h1 as h3 d-inline-block align-text-center text-light fw-bold">MOBICOMM</h1>
                     </a>
@@ -25,7 +25,7 @@
                                 <img src="Assets/Images/profile-icon.png" class="float-end me-3" alt="Profile" width="35" height="35">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item" href="#">Login</a></li>
+                                <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
                                 <li><a class="dropdown-item" href="#">Help</a></li>
                             </ul>
                         </div>
@@ -34,86 +34,56 @@
             </nav>
         </div>
     </header>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login with OTP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Phone Number Input -->
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">Enter Mobile Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter 10-digit mobile number" pattern="\d{10}" required>
+                        <div class="text-danger mt-1 d-none" id="phoneError">Enter a valid 10-digit number!</div>
+                    </div>
+    
+                    <!-- OTP Input (Hidden Initially) -->
+                    <div class="mb-3 d-none" id="otpSection">
+                        <label for="otp" class="form-label">Enter OTP</label>
+                        <input type="text" class="form-control" id="otp" placeholder="Enter OTP">
+                    </div>
+    
+                    <!-- Buttons -->
+                    <button class="btn btn-primary w-100" id="getOtpBtn" onclick="getOTP()">Get OTP</button>
+                    <button class="btn btn-success w-100 mt-2 d-none" id="loginBtn" onclick="login()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-3 bg-dark text-light vh-100 position-fixed d-flex flex-column align-items-center pt-4">
-                <div class="list-group w-100 mt-5">
-                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-1">Offers</a>
-                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-2">Gift card</a>
-                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-3">Wallet money</a>
-                    <a class="list-group-item list-group-item-action bg-dark text-light border-0" href="#list-item-4">Help & Support</a>
+        <div class="row inedx-main-content`">
+            <!-- Recharge section -->
+            <section class="col-md-8 col-lg-6 mt-5 p-4 recharge-section">
+                <h1 class="h3 text-center mb-4">Prepaid Recharge</h1>
+                <p class="text-center  mb-3">Enter your mobile number</p>
+                <div class="input-group mb-3">
+                    <input type="tel" id="mobileNumber" class="form-control pe-2"
+                           placeholder="Enter 10-digit mobile number" required
+                           maxlength="10" oninput="validateNumberInput(this)">
+                    <button type="button" id="proceedButton" class="btn btn-primary" 
+                            onclick="validateAndProceed()" disabled>
+                        Proceed
+                    </button>
                 </div>
-            </nav>
-
-            <!-- Recharge card -->
-            <section class="col-md-9 ms-auto mt-5 p-4">
-                <div class="card w-50">
-                    <div class="card-body">
-                        <h1 class="h1 as h3">Prepaid Recharge</h3>
-                        <p class="mb-0 mt-3">Mobile Number</h5>
-                        <input type="tel" class="form-control mt-0 w-75" placeholder="Enter 10-digit mobile number" required pattern="^\d{10}$">
-                        <button type="button" onclick="window.location.href='plans.html'" class="btn btn-primary mt-3 ms-5 w-50 p-0">Proceed to recharge</button>
-                    </div> 
-                </div>
+                <small id="error-message" class="text-danger d-block text-center"></small>
             </section>
         </div>
     </div>
+  
 
-    <div class="main-content">
-        <h3 class="mb-2">Super Saver plans</h3>
-        <div class="position-relative">
-            <div class="scroll-container d-flex">
-                <!-- Card 1 -->
-                <div class="card shadow">
-                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 1</h5>
-                        <p class="card-text">Description for card 1.</p>
-                        <button type="button" onclick="window.location.href='Details.html'" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="card shadow">
-                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 2</h5>
-                        <p class="card-text">Description for card 2.</p>
-                        <button type="button" onclick="window.location.href='Details.html'" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
-
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="card shadow">
-                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 3</h5>
-                        <p class="card-text">Description for card 3.</p>
-                        <button type="button" onclick="window.location.href='Details.html'" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="card shadow">
-                    <img src="https://via.placeholder.com/250x150" class="card-img-top" alt="Image 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 4</h5>
-                        <p class="card-text">Description for card 4.</p>
-                        <button type="button" onclick="window.location.href='Details.html'" type="submit" class="btn btn-primary btn-sm mt-3 ms-5 w-50 p-0"><small>View Details</small> </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="main-content">
-        <div class="position-relative">
-            <h2 class="h2 as h4">Online Prepaid Recharge</h2>
-            <div class="card d-flex p-3 shadow">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut excepturi eveniet cupiditate! At ipsam eum harum omnis 
-                    deleniti aperiam laborum! Magnam minus repudiandae, veniam aperiam vel ea beatae dolore quisquam.</p>
-            </div>
-        </div>
-    </div>
-    <div class="main-content">
+    <div class="inedx-main-content">
         <div class="position-relative">
             <h2 class="h2 as h4">FAQ's</h2>
             <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -150,14 +120,14 @@
               </div>
         </div>
     </div>
-    <div class="main-content">
+    <div class="inedx-main-content">
         <div class="position-relative">
 
             <footer class="footer mt-2">
                 <div class="container">
                     <div class="row text-dark">
                         <div class="col-md-3">
-                            <h2 class="text-dark     fw-bold">Mobicomm</h6>
+                            <h2 class="text-dark fw-bold">Mobicomm</h6>
                         </div>
                         <div class="col-md-3">
                             <p>About us</p>
@@ -169,7 +139,35 @@
                         </div>
                         <div class="col-md-3">
                             <p>Testimonials</p>
-                            <p>Consumer Complaint</p>
+                            <!-- <a type="button" href=""></a> -->
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Consumer Complaint</button>
+    
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,6 +181,37 @@
 
 
     <script>
+         function getOTP() {
+        let phoneInput = document.getElementById("phoneNumber").value;
+        let phoneError = document.getElementById("phoneError");
+        let otpSection = document.getElementById("otpSection");
+        let loginBtn = document.getElementById("loginBtn");
+
+        // Validate Phone Number
+        if (!/^\d{10}$/.test(phoneInput)) {
+            phoneError.classList.remove("d-none");
+            return;
+        } else {
+            phoneError.classList.add("d-none");
+        }
+
+        alert("OTP Sent to " + phoneInput); // Simulating OTP sending
+
+        // Show OTP Input & Login Button
+        otpSection.classList.remove("d-none");
+        loginBtn.classList.remove("d-none");
+    }
+
+    function login() {
+        let otpInput = document.getElementById("otp").value;
+
+        if (otpInput === "123456") {  // Simulating a correct OTP
+            alert("Login Successful!");
+            document.getElementById("loginModal").classList.remove("show");
+        } else {
+            alert("Invalid OTP! Try again.");
+        }
+    }
         function scrollLeft() { 
             document.querySelector(".scroll-container").scrollBy({
                 left: -300, behavior: "smooth"
@@ -194,7 +223,44 @@
                 left: 300, behavior: "smooth"
             });
         }
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
 
+        function validateNumberInput(input) {
+        input.value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+        let errorMessage = document.getElementById("error-message");
+        let proceedButton = document.getElementById("proceedButton");
+
+        if (input.value.length === 10) {
+            errorMessage.textContent = ""; // Clear error
+            proceedButton.disabled = false; // Enable button
+        } else {
+            errorMessage.textContent = "Please enter a valid 10-digit mobile number.";
+            proceedButton.disabled = true; // Disable button
+        }
+    }
+
+    function validateAndProceed() {
+        let mobileInput = document.getElementById("mobileNumber").value;
+
+        if (mobileInput.length === 10) {
+            window.location.href = 'plans.html'; // Redirect to payment page
+        }
+    }
+        // Function to close modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            let modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
     </script>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

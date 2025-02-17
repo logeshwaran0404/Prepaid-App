@@ -75,5 +75,19 @@
         {
             "id": 2, "price": "₹ 799", "validity": "84 days", "data": "2.5 GB/day + Free OTT Subscription"
         }
+    ],
+    "SuperSaver": [
+        {
+            "id": 1, "price": "₹ 19", "validity": "1 day", "data": "1 GB"
+        },
+        {
+            "id": 2, "price": "₹ 49", "validity": "7 days", "data": "3 GB"
+        },
+        {
+            "id": 3, "price": "₹ 98", "validity": "28 days", "data": "6 GB"
+        },
+        {
+            "id": 4, "price": "₹ 108", "validity": "28 days", "data": "6 GB"
+        }
     ]
 }
