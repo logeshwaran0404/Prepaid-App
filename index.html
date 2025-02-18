@@ -34,6 +34,10 @@
             </nav>
         </div>
     </header>
+
+
+<!-- Login -->
+
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -58,71 +62,101 @@
                     <!-- Buttons -->
                     <button class="btn btn-primary w-100" id="getOtpBtn" onclick="getOTP()">Get OTP</button>
                     <button class="btn btn-success w-100 mt-2 d-none" id="loginBtn" onclick="login()">Login</button>
+                    <!-- Toast Container -->
+                    <div id="toastContainer" class="position-fixed top-0 end-0 p-3" style="z-index: 1050;"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row inedx-main-content`">
-            <!-- Recharge section -->
-            <section class="col-md-8 col-lg-6 mt-5 p-4 recharge-section">
-                <h1 class="h3 text-center mb-4">Prepaid Recharge</h1>
-                <p class="text-center  mb-3">Enter your mobile number</p>
-                <div class="input-group mb-3">
-                    <input type="tel" id="mobileNumber" class="form-control pe-2"
-                           placeholder="Enter 10-digit mobile number" required
-                           maxlength="10" oninput="validateNumberInput(this)">
-                    <button type="button" id="proceedButton" class="btn btn-primary" 
-                            onclick="validateAndProceed()" disabled>
-                        Proceed
-                    </button>
+
+    <!-- Recharge Section -->
+<!-- Recharge Section -->
+<br>
+<br><br>
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center index-main-content">
+        <!-- Recharge Card -->
+        <div class="col-md-6 col-lg-5 mt-5">
+            <div class="card recharge-card shadow-lg" style="border-radius: 15px; border: none;">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <img src="Assets\Images\logo.png" alt="Mobicomm Logo" class="img-fluid mb-3" style="width: 80px;">
+                        <h1 class="h3 mb-3" style="color: #2c3e50;">Prepaid Recharge</h1>
+                        <p class="text-muted">Quickly recharge your mobile number and stay connected.</p>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="mobileNumber" class="form-label">Enter your 10-digit mobile number</label>
+                            <input type="tel" id="mobileNumber" class="form-control form-control-lg"
+                                   placeholder="e.g., 9876543210" required
+                                   maxlength="10" oninput="validateNumberInput(this)">
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" id="proceedButton" class="btn btn-lg"
+                                    onclick="validateAndProceed()" disabled>
+                                <i class="fas fa-arrow-right me-2"></i>Proceed
+                            </button>
+                        </div>
+                        <small id="error-message" class="text-danger d-block text-center mt-2"></small>
+                    </form>
                 </div>
-                <small id="error-message" class="text-danger d-block text-center"></small>
-            </section>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="col-md-6 col-lg-5 mt-5 d-none d-md-block">
+            <div class="text-center">
+                <img src="Assets\Images\MobilePerepaid.svg" alt="Recharge Illustration" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 15px;">
+            </div>
         </div>
     </div>
-  
+</div>
 
-    <div class="inedx-main-content">
-        <div class="position-relative">
-            <h2 class="h2 as h4">FAQ's</h2>
+<!-- Special offer -->
+
+<!-- FAQ Section -->
+<div class="container-fluid mt-5">
+    <div class="row index-main-content">
+        <div class="col-md-12">
+            <h2 class="h2 text-center mb-4">FAQ's</h2>
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      Accordion Item #1
-                    </button>
-                  </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                  </div>
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                  </div>
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                  </div>
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
+</div>
+
     <div class="inedx-main-content">
         <div class="position-relative">
-
             <footer class="footer mt-2">
                 <div class="container">
                     <div class="row text-dark">
@@ -174,44 +208,77 @@
             </footer>
         
             <div class="footer-bottom m-0">
-                @copy rights reserved to mobicomm
+                &copy copy rights reserved to mobicomm
             </div>
         </div>
     </div>
 
 
     <script>
-         function getOTP() {
-        let phoneInput = document.getElementById("phoneNumber").value;
-        let phoneError = document.getElementById("phoneError");
-        let otpSection = document.getElementById("otpSection");
-        let loginBtn = document.getElementById("loginBtn");
+         function showToast(message, type = "success") {
+    let toastContainer = document.getElementById("toastContainer");
+    let toast = document.createElement("div");
 
-        // Validate Phone Number
-        if (!/^\d{10}$/.test(phoneInput)) {
-            phoneError.classList.remove("d-none");
-            return;
-        } else {
-            phoneError.classList.add("d-none");
-        }
+    toast.className = `toast align-items-center text-white bg-${type} border-0 show`;
+    toast.role = "alert";
+    toast.innerHTML = `
+        <div class="d-flex">
+            <div class="toast-body">${message}</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    `;
 
-        alert("OTP Sent to " + phoneInput); // Simulating OTP sending
+    toastContainer.appendChild(toast);
 
-        // Show OTP Input & Login Button
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 500); // Remove from DOM after fading out
+    }, 3000);
+}
+
+function getOTP() {
+    let phoneInput = document.getElementById("phoneNumber").value.trim();
+    let phoneError = document.getElementById("phoneError");
+    let otpSection = document.getElementById("otpSection");
+    let loginBtn = document.getElementById("loginBtn");
+
+    if (!/^\d{10}$/.test(phoneInput)) {
+        phoneError.classList.remove("d-none");
+        return;
+    } else {
+        phoneError.classList.add("d-none");
+    }
+
+    // Simulating OTP sending
+    setTimeout(() => {
+        showToast("OTP Sent to " + phoneInput, "success");
         otpSection.classList.remove("d-none");
         loginBtn.classList.remove("d-none");
-    }
+    }, 500);
+}
 
-    function login() {
-        let otpInput = document.getElementById("otp").value;
+function login() {
+    let otpInput = document.getElementById("otp").value.trim();
+    let loginModal = document.getElementById("loginModal");
 
-        if (otpInput === "123456") {  // Simulating a correct OTP
-            alert("Login Successful!");
-            document.getElementById("loginModal").classList.remove("show");
-        } else {
-            alert("Invalid OTP! Try again.");
-        }
+    if (otpInput === "123456") {
+        showToast("Login Successful!", "success");
+
+        setTimeout(() => {
+            let modalBackdrop = document.querySelector(".modal-backdrop");
+            if (modalBackdrop) modalBackdrop.remove();
+            loginModal.classList.remove("show");
+            loginModal.style.display = "none";
+            document.body.classList.remove("modal-open");
+            window.location.href = "userplans.html";  // Change this to your actual page URL
+        }, 1500);  
+        
+    } else {
+        showToast("Invalid OTP! Try again.", "danger");
     }
+}
+
+
         function scrollLeft() { 
             document.querySelector(".scroll-container").scrollBy({
                 left: -300, behavior: "smooth"

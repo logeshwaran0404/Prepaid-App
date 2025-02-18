@@ -1,36 +1,36 @@
 {
     "popularPlan": [
         {
-            "id": 1, "price": "₹ 249", "validity": "28 days", "data": "1 GB/day"
+            "id": 1, "price": "₹ 249", "validity": "28 days", "data": "1 GB/day", "desc":"Unlimited 5G data"
         },
         {
-            "id": 2, "price": "₹ 399", "validity": "56 days", "data": "1.5 GB/day"
+            "id": 2, "price": "₹ 399", "validity": "56 days", "data": "1.5 GB/day", "desc":"Unlimited 5G data"
         },
         {
-            "id": 3, "price": "₹ 599", "validity": "84 days", "data": "2 GB/day"
+            "id": 3, "price": "₹ 599", "validity": "84 days", "data": "2 GB/day", "desc":"Unlimited 5G data"
         },
         {
-            "id": 4, "price": "₹ 719", "validity": "90 days", "data": "2.5 GB/day"
+            "id": 4, "price": "₹ 719", "validity": "90 days", "data": "2.5 GB/day", "desc":"Unlimited 5G data"
         },
         {
-            "id": 5, "price": "₹ 999", "validity": "365 days", "data": "3 GB/day"
+            "id": 5, "price": "₹ 999", "validity": "365 days", "data": "3 GB/day", "desc":"Unlimited 5G data"
         }
     ],
     "unlimitedPlans": [
         {
-            "id": 1, "price": "₹ 299", "validity": "28 days", "data": "Unlimited Data"
+            "id": 1, "price": "₹ 299", "validity": "28 days", "data": "Unlimited Data", "desc":"Free Prime, Spotify"
         },
         {
-            "id": 2, "price": "₹ 499", "validity": "56 days", "data": "Unlimited Data"
+            "id": 2, "price": "₹ 499", "validity": "56 days", "data": "Unlimited Data", "desc":"Free Prime, Spotify"
         },
         {
-            "id": 3, "price": "₹ 699", "validity": "84 days", "data": "Unlimited Data"
+            "id": 3, "price": "₹ 699", "validity": "84 days", "data": "Unlimited Data", "desc":"Free Prime, Spotify"
         },
         {
-            "id": 4, "price": "₹ 799", "validity": "90 days", "data": "Unlimited Data + 100 SMS/day"
+            "id": 4, "price": "₹ 799", "validity": "90 days", "data": "Unlimited Data + 100 SMS/day", "desc":"Free Prime, Spotify"
         },
         {
-            "id": 5, "price": "₹ 1499", "validity": "365 days", "data": "Unlimited Data + 200 SMS/day"
+            "id": 5, "price": "₹ 1499", "validity": "365 days", "data": "Unlimited Data + 200 SMS/day","desc":"Free Prime, Spotify"
         }
     ],
     "validityPlans": [

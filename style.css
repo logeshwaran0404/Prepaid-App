@@ -25,12 +25,6 @@
     width: 100%;
 }
 
-/* Main Content Area */
-.index-main-content {
-    margin-left: 25%;
-    padding: 20px;
-    width: 100%;
-}
 
 .recharge-section {
     background-color: #ffffff; /* White background for the section */
@@ -210,7 +204,47 @@ input[type="tel"]:focus {
 }
 
 .paymemt-body{
-    margin-left: 25%;
+    margin-top: 50%;
     padding: 20px;
     width: 75%;
+}
+
+.payment-summary-card {
+    width: 400px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #afe7f2;
+}
+.payment-summary-card h2 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.payment-summary-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+.payment-summary-card .total-amount {
+    font-size: 20px;
+    font-weight: 600;
+    color: #28a745; /* Green color for total amount */
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+.btn-pay-now {
+    background-color: #0056b3;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+}
+.btn-pay-now:hover {
+    background-color: #0056b3;
+    
 }
